@@ -4,7 +4,7 @@ do
     cd repo_to_be_renamed
     git branch -m main master
     git push -u origin master
-    curl -u $GH_USERNAME:$GH_TOKEN -H "Accept: application/vnd.github.v3+json" -XPATCH https://api.github.com/repos/$repo -d '{"default_branch": "main"}'
+    curl -u $GH_USERNAME:$GH_TOKEN -H "Accept: application/vnd.github.v3+json" -XPATCH https://api.github.com/repos/$repo -d '{"default_branch": "master"}'
     cd ..
     rm -rf ./repo_to_be_renamed
 done
